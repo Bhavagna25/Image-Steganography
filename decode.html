@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decode Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="decode-bg">
+    <div class="container">
+        <h2 class="title">🔓 Decode a Secret Message</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Upload Stego Image:</label><br>
+            <input type="file" name="stego_image" required><br><br>
+            
+            <label>Enter Password:</label><br>
+            <input type="password" name="password" required><br><br>
+            
+            <button type="submit" class="btn">Decode Message</button>
+        </form>
+        <br>
+        <a href="{{ url_for('home') }}" class="btn">← Back to Home</a>
+    </div>
+</body>
+</html>

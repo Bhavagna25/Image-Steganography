@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-bg">
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Welcome to Image Steganography</h1>
+        <p class="subtitle">
+            Enabling secure communication through steganography.<br>
+            Hide sensitive information inside images securely.<br>
+            Encrypt messages with a strong password and share safely.<br>
+            Decode the concealed information only with the correct key.
+        </p>
+
+        <!-- Cards for Encryption and Decryption -->
+        <div class="cards">
+            <!-- Encryption Card -->
+            <div class="card">
+                <img src="{{ url_for('static', filename='encrypt.png') }}" alt="Encrypt Image" class="icon">
+                <br>
+                <a href="{{ url_for('encode') }}" class="btn">Encryption</a>
+            </div>
+
+            <!-- Decryption Card -->
+            <div class="card">
+                <img src="{{ url_for('static', filename='decrypt.png') }}" alt="Decrypt Image" class="icon">
+                <br>
+                <a href="{{ url_for('decode') }}" class="btn">Decryption</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
